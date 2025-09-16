@@ -166,6 +166,14 @@ footer .subtitle {
   margin-bottom: 2px;
 }
 
+#contact a {
+  color: white;
+}
+
+#contact a:hover{
+  color: wheat;
+}
+
 #contactSymbols {
   position: relative;
   margin-top: 10px;
