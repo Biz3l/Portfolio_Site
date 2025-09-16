@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --backgroundColor: #171717;
+}
+
+body {
+  color: white;
+  background-color: var(--backgroundColor);
+  font-family: "Montserrat", sans-serif;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+nav {
+  background-color: rgba(184, 184, 184, 0.3);
+  padding: 4px;
+  border-radius: 0px 5px;
+  margin: 0 0;
+  left: 0px;
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+nav li {
+  list-style: none;
+  display: inline-flex;
+}
+
+nav ul {
+  margin-right: 8;
+}
+
+nav a {
+  margin: 5px;
+  color: white;
+  font-family: "JetBrains Mono", sans-serif;
+}
+
+#titlenav {
+  font-family: "JetBrains Mono", sans-serif;
+  color: rgb(255, 255, 255);
+  margin-left: 10px;
+}
+
+main {
+  margin-left: 8px;
+}
+
+#aboutMe {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+#aboutMe #aboutMeTitle {
+  display: inline-flex;
+  align-items: center;
+  align-content: center;
+}
+
+#titleRed {
+  margin-left: 10px;
+  padding: 2px;
+  background-color: rgb(196, 52, 52);
+}
+
+#aboutMe .textSection {
+  text-align: justify;
+  margin-right: 10px;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+#aboutMeText {
+  height: auto;
+  width: 75%;
+}
+
+.picContainer {
+  float: right;
+  margin-right: 10px;
+  height: 270px;
+  width: 20%;
+  max-width: 20%;
+}
+
+.picContainer img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border: solid white 5px;
+  border-radius: 5px;
+}
+
+#projects {
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+#projects h2 {
+  margin-bottom: 0;
+  position: relative;
+  left: 10px;
+}
+
+#projects ul {
+  margin-top: 0;
+}
+
+#projects li {
+  font-family: "JetBrains Mono", sans-serif;
+}
+
+#projects a {
+  color: white;
+}
+
+#projects a::before {
+  content: "🔗";
+}
+
+#projects a:hover {
+  color: wheat;
+  transition: color, 1s;
+}
+
+footer{
+  margin-left: 10px;
+}
+
+footer .subtitle {
+  margin-top: 2px;
+  margin-left: 10px;
+  margin-bottom: 0;
+}
+
+.skillsSymbols {
+  width: 100%;
+}
+
+#contact {
+  font-family: "JetBrains mono", sans-serif;
+  margin: 0;
+  margin-left: 10px;
+  margin-top: 30px;
+  width: auto;
+}
+
+#contact h3 {
+  margin-bottom: 0;
+}
+
+#contact p {
+  margin-top: 0;
+  margin-bottom: 2px;
+}
+
+#contactSymbols {
+  position: relative;
+  margin-top: 10px;
+  margin-left: 0px;
+  right: 5px
+}
+
+#contactSymbols a {
+  color: white;
+}
+
+#contactSymbols a:hover {
+  color: wheat;
+  transition: color 1s;
+}
