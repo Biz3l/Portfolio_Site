@@ -274,6 +274,8 @@ footer .subtitle {
     justify-items: center;
     justify-content: center;
     align-content: center;
+    text-align: center;
+    flex-wrap: wrap;
   }
   footer .skillsSymbols {
     display: flex;
