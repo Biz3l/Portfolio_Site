@@ -137,6 +137,12 @@ main {
 
 footer{
   margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
 }
 
 footer .subtitle {
@@ -147,6 +153,11 @@ footer .subtitle {
 
 .skillsSymbols {
   width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  align-content: center;
 }
 
 #contact {
@@ -155,6 +166,9 @@ footer .subtitle {
   margin-left: 10px;
   margin-top: 30px;
   width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #contact h3 {
@@ -178,7 +192,6 @@ footer .subtitle {
   position: relative;
   margin-top: 10px;
   margin-left: 0px;
-  right: 5px
 }
 
 #contactSymbols a {
@@ -188,4 +201,83 @@ footer .subtitle {
 #contactSymbols a:hover {
   color: wheat;
   transition: color 1s;
+}
+
+
+/* Animação dos ícones */
+
+.fa-html5:hover {
+  color: #F06529;
+  transition: color 0.5s;
+}
+
+.fa-css3-alt:hover {
+  color: rgb(206, 56, 206);
+  transition: color 0.5s;
+}
+
+.fa-js:hover {
+  color: yellow;
+  transition: color 0.5s;
+}
+
+.fa-node-js:hover {
+  color: rgb(101, 168, 0);
+  transition: color 0.5s;
+}
+
+.fa-python:hover {
+  color: yellow;
+  transition: color 0.5s;
+}
+
+/* Ajustes para dispositivos movéis */
+
+@media only screen  and (max-width: 600px) {
+  #aboutMe {
+    display: flex;
+    flex-direction: column;
+  }
+  #aboutMe .textSection {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    flex: none;
+    display: flex;
+    justify-content: center;
+  }
+  #aboutMe .picContainer {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+  }
+  #aboutMe .picContainer img {
+    border: 2px solid white;
+  }
+  
+
+  #projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #projects h2 {
+    font-size: 1.5em;
+  }
+  #projects ul li {
+    font-size: 1.2em;
+  }
+  
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+  footer .skillsSymbols {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
 }
