@@ -200,35 +200,48 @@ footer .subtitle {
 
 #contactSymbols a:hover {
   color: wheat;
-  transition: color 1s;
+  transform: translateY(5px);
+  transition: color 1s, transform 1s;
 }
 
 
 /* Animação dos ícones */
 
+.fa-brands {
+  transition: transform 0.5s;
+}
+.fa-brands:hover {
+  transform:  translateY(-5px);
+}
+
 .fa-html5:hover {
   color: #F06529;
-  transition: color 0.5s;
+  transition: color 0.5s, transform 0.5s;
 }
 
 .fa-css3-alt:hover {
   color: rgb(206, 56, 206);
-  transition: color 0.5s;
+  transition: color 0.5s, transform 0.5s;
 }
 
 .fa-js:hover {
   color: yellow;
-  transition: color 0.5s;
+  transition: color 0.5s, transform 0.5s;
 }
 
 .fa-node-js:hover {
   color: rgb(101, 168, 0);
-  transition: color 0.5s;
+  transition: color 0.5s, transform 0.5s;
 }
 
 .fa-python:hover {
   color: yellow;
-  transition: color 0.5s;
+  transition: color 0.5s, transform 0.5s;
+}
+
+.fa-react:hover {
+  color: rgb(45, 223, 164);
+  transition: color 0.5s, transform 0.5s;
 }
 
 /* Ajustes para dispositivos movéis */
