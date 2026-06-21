@@ -3,6 +3,7 @@ import { randomColorsBack } from "./Resources/Modules/ChangeColor.js";
 const aboutMe = document.getElementById("titleRed");
 const title = "Biz3l Portfolio Site";
 let randomColorsInterval;
+let titlesInterval;
 
 aboutMe.addEventListener("mouseenter", () => {
     document.title = "An EASTER EGG :))";
@@ -22,7 +23,11 @@ aboutMe.addEventListener("mouseleave", () => {
 document.addEventListener("visibilitychange", () => {
     if (document.visibilityState == "visible") {
         document.title = title
+        clearInterval(titlesInterval);
     } else {
-        document.title = "Pleaseee return :("
+        const phrases = ["Pleaseee return :(", "I am heereeee", "Hellooooo?", "Hey did, you leave me?!"];
+        titlesInterval = setInterval(() => {
+            document.title = Math.floor(Math.random() * phrases.length);
+        }, 750);
     };
 });
