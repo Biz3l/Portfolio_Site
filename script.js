@@ -27,7 +27,7 @@ document.addEventListener("visibilitychange", () => {
     } else {
         const phrases = ["Pleaseee return :(", "I am heereeee", "Hellooooo?", "Hey did, you leave me?!"];
         titlesInterval = setInterval(() => {
-            document.title = Math.floor(Math.random() * phrases.length);
+            document.title = phrases[Math.floor(Math.random() * phrases.length)];
         }, 750);
     };
 });
