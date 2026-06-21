@@ -1,7 +1,7 @@
 import { randomColorsBack } from "./Resources/Modules/ChangeColor.js";
 
 const aboutMe = document.getElementById("titleRed");
-
+const title = "Biz3l Portfolio Site";
 let randomColorsInterval;
 
 aboutMe.addEventListener("mouseenter", () => {
@@ -14,6 +14,15 @@ aboutMe.addEventListener("mouseenter", () => {
 
 aboutMe.addEventListener("mouseleave", () => {
     clearInterval(randomColorsInterval);
-    document.title = "Biz3l Portfolio Site";
+    document.title = title;
     aboutMe.style.backgroundColor = "";
+});
+
+
+document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState == "visible") {
+        document.title = title
+    } else {
+        document.title = "Pleaseee return :("
+    };
 });

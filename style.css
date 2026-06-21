@@ -33,7 +33,7 @@ nav li {
 }
 
 nav ul {
-  margin-right: 8;
+  margin-right: 8px;
 }
 
 nav a {
@@ -262,7 +262,7 @@ footer .subtitle {
     display: flex;
     width: 100%;
     max-width: 100%;
-    margin-right: 0;
+    margin-right: 0px;
   }
   #aboutMe .picContainer img {
     border: 2px solid white;
