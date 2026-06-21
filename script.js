@@ -25,9 +25,9 @@ document.addEventListener("visibilitychange", () => {
         document.title = title
         clearInterval(titlesInterval);
     } else {
-        const phrases = ["Pleaseee return :(", "I am heereeee", "Hellooooo?", "Hey did, you leave me?!"];
+        const phrases = ["Pleaseee return :(", "I am heereeee", "Hellooooo?", "Hey, did you leave me?!"];
         titlesInterval = setInterval(() => {
             document.title = phrases[Math.floor(Math.random() * phrases.length)];
-        }, 750);
+        }, 1500);
     };
 });
