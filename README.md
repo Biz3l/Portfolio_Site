@@ -6,7 +6,7 @@ Landing page de portfólio pessoal, desenvolvida com **HTML, CSS e JavaScript pu
 
 - Seção **About Me** com apresentação pessoal
 - Lista de **projetos** com links para repositórios
-- Seção de **skills** com ícones (Font Awesome)
+- Seção de **skills** com ícones (Font Awesome + Devicon)
 - Área de **contato** com e-mail, LinkedIn e GitHub
 - **Easter egg interativo** no título “Me” (mudança dinâmica de cor)
 - Título da aba com mensagens dinâmicas quando o usuário troca de aba
@@ -18,6 +18,7 @@ Landing page de portfólio pessoal, desenvolvida com **HTML, CSS e JavaScript pu
 - CSS3
 - JavaScript (ES Modules)
 - [Font Awesome](https://fontawesome.com/)
+- [Devicon](https://devicon.dev/)
 - [Google Fonts](https://fonts.google.com/) (Montserrat e JetBrains Mono)
 
 ## 📁 Estrutura do projeto
