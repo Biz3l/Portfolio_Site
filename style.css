@@ -176,6 +176,13 @@ main {
   align-content: center;
   justify-content: center;
   font-family: "Share Tech Mono", "JetBrains Mono", monospace;
+  color: #39ff14;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(57, 255, 20, 0.55);
+  border-radius: 8px;
+  padding: 12px 14px;
+  box-shadow: 0 0 14px rgba(57, 255, 20, 0.22), inset 0 0 10px rgba(57, 255, 20, 0.15);
+  text-shadow: 0 0 6px rgba(57, 255, 20, 0.45);
 }
 
 #projects h2 {
@@ -183,6 +190,8 @@ main {
   margin-left: 8px;
   letter-spacing: 1px;
   text-transform: uppercase;
+  color: #7fff7f;
+  text-shadow: 0 0 8px rgba(127, 255, 127, 0.6);
 }
 
 #projects ul {
@@ -196,7 +205,8 @@ main {
 }
 
 #projects a {
-  color: white;
+  color: #6eff6e;
+  transition: color 0.35s, text-shadow 0.35s;
 }
 
 #projects a::before {
@@ -204,8 +214,8 @@ main {
 }
 
 #projects a:hover {
-  color: wheat;
-  transition: color 1s;
+  color: #c7ffc7;
+  text-shadow: 0 0 8px rgba(199, 255, 199, 0.7);
 }
 
 footer {
