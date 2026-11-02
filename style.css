@@ -55,6 +55,21 @@ nav ul {
   color: var(--highlight);
 }
 
+.titleGlow {
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.4), 0 0 14px rgba(196, 52, 52, 0.45);
+  animation: titleGlowPulse 2.2s ease-in-out infinite;
+}
+
+@keyframes titleGlowPulse {
+  0%,
+  100% {
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.35), 0 0 12px rgba(196, 52, 52, 0.35);
+  }
+  50% {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 0 0 18px rgba(196, 52, 52, 0.65);
+  }
+}
+
 .tabButton {
   padding: 8px 14px;
   background-color: transparent;
@@ -74,6 +89,63 @@ nav ul {
 .tabButton.active {
   background-color: var(--highlight);
   border-color: var(--highlight);
+}
+
+#projectsTabButton {
+  position: relative;
+  isolation: isolate;
+}
+
+#projectsTabButton::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  pointer-events: none;
+  opacity: 0;
+  text-shadow: -2px -2px 0 #00fff9, 2px 2px 0 #ff00e6;
+  clip-path: inset(50% 50% 50% 50%);
+}
+
+#projectsTabButton:hover::after,
+#projectsTabButton:focus-visible::after {
+  opacity: 1;
+  animation: projectGlitch 900ms steps(2, end) infinite;
+}
+
+#projectsTabButton:hover,
+#projectsTabButton:focus-visible {
+  box-shadow: 0 0 10px rgba(255, 0, 230, 0.35), 0 0 14px rgba(0, 255, 249, 0.35);
+}
+
+@keyframes projectGlitch {
+  0% {
+    clip-path: inset(78% 0 0 0);
+    transform: translate(-2px, -1px);
+  }
+  20% {
+    clip-path: inset(8% 0 72% 0);
+    transform: translate(2px, 1px);
+  }
+  40% {
+    clip-path: inset(42% 0 30% 0);
+    transform: translate(-1px, 2px);
+  }
+  60% {
+    clip-path: inset(65% 0 10% 0);
+    transform: translate(2px, -2px);
+  }
+  80% {
+    clip-path: inset(20% 0 58% 0);
+    transform: translate(-2px, 1px);
+  }
+  100% {
+    clip-path: inset(85% 0 0 0);
+    transform: translate(1px, -1px);
+  }
 }
 
 main {
@@ -408,6 +480,10 @@ footer {
   #projects h2 {
     font-size: 1.4em;
     margin-left: 0;
+  }
+
+  .titleGlow {
+    animation-duration: 2.8s;
   }
 
   #projects ul li {
