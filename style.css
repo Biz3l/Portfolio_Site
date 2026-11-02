@@ -225,6 +225,15 @@ footer {
   flex-wrap: wrap;
 }
 
+.skillsSymbols i {
+  font-size: 3rem;
+  transition: color 0.5s, transform 0.5s;
+}
+
+.skillsSymbols i:hover {
+  transform: translateY(-5px);
+}
+
 #contact {
   font-family: "JetBrains Mono", sans-serif;
   margin: 0 auto;
@@ -312,6 +321,22 @@ footer {
 .fa-react:hover {
   color: rgb(45, 223, 164);
   transition: color 0.5s, transform 0.5s;
+}
+
+.devicon-java-plain:hover {
+  color: #f89820;
+}
+
+.devicon-docker-plain:hover {
+  color: #2496ed;
+}
+
+.devicon-spring-plain:hover {
+  color: #6db33f;
+}
+
+.devicon-mysql-plain:hover {
+  color: #4479a1;
 }
 
 /* Ajustes para dispositivos movéis */
