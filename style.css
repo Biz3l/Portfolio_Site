@@ -1,7 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Share+Tech+Mono&display=swap');
 
 :root {
   --backgroundColor: #171717;
+  --panelColor: rgba(255, 255, 255, 0.08);
+  --borderColor: rgba(255, 255, 255, 0.25);
+  --highlight: rgb(196, 52, 52);
 }
 
 body {
@@ -10,46 +13,93 @@ body {
   font-family: "Montserrat", sans-serif;
   margin: 0 auto;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 nav {
-  background-color: rgba(184, 184, 184, 0.3);
-  padding: 4px;
-  border-radius: 0px 5px;
-  margin: 0 0;
-  left: 0px;
-  display: inline-flex;
+  background-color: rgba(184, 184, 184, 0.2);
+  padding: 8px 12px;
+  margin: 0;
+  display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  flex: 1;
-  flex-grow: 1;
-  flex-shrink: 1;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--borderColor);
+  backdrop-filter: blur(4px);
 }
 
 nav li {
   list-style: none;
   display: inline-flex;
+  margin-left: 6px;
 }
 
 nav ul {
+  margin: 0;
   margin-right: 8px;
+  padding: 0;
+  display: flex;
+  align-items: center;
 }
 
-nav a {
-  margin: 5px;
-  color: white;
-  font-family: "JetBrains Mono", sans-serif;
-}
-
-#titlenav {
+#titleNav {
   font-family: "JetBrains Mono", sans-serif;
   color: rgb(255, 255, 255);
   margin-left: 10px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.tabButton {
+  padding: 8px 14px;
+  background-color: transparent;
+  border: 1px solid var(--borderColor);
+  border-radius: 6px;
+  color: white;
+  font-family: "JetBrains Mono", sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, border-color 0.3s;
+}
+
+.tabButton:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.tabButton.active {
+  background-color: var(--highlight);
+  border-color: var(--highlight);
 }
 
 main {
-  margin-left: 8px;
+  margin: 16px auto;
+  max-width: 1100px;
+  width: calc(100% - 24px);
+}
+
+.tabSection {
+  display: none;
+  background-color: var(--panelColor);
+  border: 1px solid var(--borderColor);
+  border-radius: 10px;
+  padding: 14px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.tabSection.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 #aboutMe {
@@ -69,7 +119,7 @@ main {
 #titleRed {
   margin-left: 10px;
   padding: 2px;
-  background-color: rgb(196, 52, 52);
+  background-color: var(--highlight);
 }
 
 #aboutMe .textSection {
@@ -84,6 +134,13 @@ main {
   width: 75%;
 }
 
+#whoAmI {
+  width: 75%;
+  border-left: 3px solid var(--highlight);
+  padding-left: 12px;
+  margin-top: 20px;
+}
+
 .picContainer {
   float: right;
   margin-right: 10px;
@@ -92,7 +149,7 @@ main {
   max-width: 20%;
 }
 
-.picContainer img{
+.picContainer img {
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -100,26 +157,38 @@ main {
   border-radius: 5px;
 }
 
-#projects {
+#aboutStacks {
+  margin-top: 22px;
+}
+
+#aboutStacks .subtitle {
   margin-left: 0;
+}
+
+#projects {
+  margin-left: 4px;
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
+  font-family: "Share Tech Mono", "JetBrains Mono", monospace;
 }
 
 #projects h2 {
   margin-bottom: 0;
-  position: relative;
-  left: 10px;
+  margin-left: 8px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 #projects ul {
   margin-top: 0;
+  padding-left: 24px;
 }
 
 #projects li {
-  font-family: "JetBrains Mono", sans-serif;
+  margin-bottom: 8px;
+  font-size: 1.03rem;
 }
 
 #projects a {
@@ -132,59 +201,58 @@ main {
 
 #projects a:hover {
   color: wheat;
-  transition: color, 1s;
+  transition: color 1s;
 }
 
-footer{
+footer {
+  margin-top: 20px;
   margin-left: 10px;
   display: flex;
-  flex-direction: column;
   align-content: center;
   justify-content: center;
   align-items: center;
-  justify-items: center;
-}
-
-footer .subtitle {
-  margin-top: 2px;
-  margin-left: 10px;
-  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "JetBrains Mono", sans-serif;
 }
 
 .skillsSymbols {
   width: 100%;
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  justify-items: center;
+  gap: 14px;
   justify-content: center;
   align-content: center;
+  flex-wrap: wrap;
 }
 
 #contact {
-  font-family: "JetBrains mono", sans-serif;
-  margin: 0;
-  margin-left: 10px;
+  font-family: "JetBrains Mono", sans-serif;
+  margin: 0 auto;
   margin-top: 30px;
-  width: auto;
+  width: 100%;
+  max-width: 700px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 #contact h3 {
   margin-bottom: 0;
+  font-size: 1.35rem;
 }
 
 #contact p {
   margin-top: 0;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 }
 
 #contact a {
   color: white;
+  transition: color 0.4s;
 }
 
-#contact a:hover{
+#contact a:hover {
   color: wheat;
 }
 
@@ -192,6 +260,8 @@ footer .subtitle {
   position: relative;
   margin-top: 10px;
   margin-left: 0px;
+  display: flex;
+  gap: 15px;
 }
 
 #contactSymbols a {
@@ -204,14 +274,14 @@ footer .subtitle {
   transition: color 1s, transform 1s;
 }
 
-
 /* Animação dos ícones */
 
 .fa-brands {
   transition: transform 0.5s;
 }
+
 .fa-brands:hover {
-  transform:  translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .fa-html5:hover {
@@ -247,40 +317,69 @@ footer .subtitle {
 /* Ajustes para dispositivos movéis */
 
 @media only screen and (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  nav ul {
+    margin-right: 0;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .tabButton {
+    font-size: 0.95rem;
+  }
+
   #aboutMe {
     display: flex;
     flex-direction: column;
   }
+
   #aboutMe .textSection {
-    font-size: 1.5em;
+    font-size: 1.02em;
     margin-bottom: 5px;
-    flex: none;
+    margin-right: 0;
+    width: 100%;
+    flex: 1;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
+
+  #aboutMeText,
+  #whoAmI {
+    width: 100%;
+  }
+
   #aboutMe .picContainer {
     display: flex;
-    width: 100%;
-    max-width: 100%;
+    width: 85%;
+    max-width: 85%;
     margin-right: 0px;
+    float: none;
   }
+
   #aboutMe .picContainer img {
     border: 2px solid white;
   }
-  
 
   #projects {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-left: 0;
   }
+
   #projects h2 {
-    font-size: 1.5em;
+    font-size: 1.4em;
+    margin-left: 0;
   }
+
   #projects ul li {
     font-size: 1.2em;
   }
-  
+
   footer {
     display: flex;
     flex-direction: column;
@@ -290,10 +389,5 @@ footer .subtitle {
     align-content: center;
     text-align: center;
     flex-wrap: wrap;
-  }
-  footer .skillsSymbols {
-    display: flex;
-    align-content: center;
-    justify-content: center;
   }
 }

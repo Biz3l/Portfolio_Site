@@ -12,26 +12,49 @@
     <nav>
       <p id="titleNav">Biz3l.Portfolio</p>
       <ul id="Nav">
-        <li><a href="#aboutMe">Home</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><button class="tabButton active" data-tab-target="aboutTab" aria-selected="true">About</button></li>
+        <li><button class="tabButton" data-tab-target="projectsTab" aria-selected="false">Projects</button></li>
       </ul>
     </nav>
     <main>
-      <section id="aboutMe">
-        <div class="textSection">
-          <div id="aboutMeTitle">
-            <h1>About</h1>
-            <h1 id="titleRed">Me</h1>
+      <section id="aboutTab" class="tabSection active">
+        <section id="aboutMe">
+          <div class="textSection">
+            <div id="aboutMeTitle">
+              <h1>About</h1>
+              <h1 id="titleRed">Me</h1>
+            </div>
+            <p id="aboutMeText">Since I was a kid, I’ve always had the impression that technology is truly incredible, and everything related to it has this "impressive touch." That’s when I started taking apart and putting electronics back together, and over time, my fascination with technology just grew stronger.
+             After diving deeper into it through study, here I am today: working with the Adobe Suite since 2019, and now exploring even more areas, from electronics to programming. For me, technology is not just a passion—it’s a journey of discovery and endless possibilities.</p>
+            <p id="whoAmI">Sou uma pessoa curiosa, criativa e apaixonada por resolver problemas com tecnologia. Gosto de transformar ideias em projetos reais, aprender novas ferramentas e evoluir constantemente como desenvolvedor.</p>
           </div>
-          <p id="aboutMeText">Since I was a kid, I’ve always had the impression that technology is truly incredible, and everything related to it has this "impressive touch." That’s when I started taking apart and putting electronics back together, and over time, my fascination with technology just grew stronger.
-           After diving deeper into it through study, here I am today: working with the Adobe Suite since 2019, and now exploring even more areas, from electronics to programming. For me, technology is not just a passion—it’s a journey of discovery and endless possibilities.</p>
-        </div>
-        <div class="picContainer">
-          <img src="Resources/Profile Pic.jpg" alt="A profile Pic" width="500" height="750">
-        </div>
+          <div class="picContainer">
+            <img src="Resources/Profile Pic.jpg" alt="A profile Pic" width="500" height="750">
+          </div>
+        </section>
+        <section id="aboutStacks">
+          <h2 class="subtitle">Stacks</h2>
+          <div class="skillsSymbols">
+            <i class="fa-brands fa-html5 fa-3x"></i>
+            <i class="fa-brands fa-css3-alt fa-3x"></i>
+            <i class="fa-brands fa-js fa-3x"></i>
+            <i class="fa-brands fa-node-js fa-3x"></i>
+            <i class="fa-brands fa-python fa-3x"></i>
+            <i class="fa-brands fa-react fa-3x"></i>
+          </div>
+        </section>
+        <section id="contact">
+          <h3>Contact</h3>
+          <p>Have any interesting project? Contact Me</p>
+          <p><strong>Email:</strong><a id="email" href="mailto:contato.goalves@gmail.com">contato.goalves@gmail.com</a></p>
+          <div id="contactSymbols">
+            <a href="https://www.linkedin.com/in/gabriel-o-alves/"><i class="fa-brands fa-linkedin fa-3x"></i></a>
+            <a href="https://github.com/Biz3l"><i class="fa-brands fa-github fa-3x"></i></a>
+          </div>
+        </section>
       </section>
-      <hr>
-      <section id="projects">
+      <section id="projectsTab" class="tabSection">
+        <section id="projects">
         <h2 class="subtitle">Projects</h2>
         <ul>
           <li><a id="dcBotLink" href="https://github.com/Biz3l/BillieJeans-BJ_Dc_bot">Discord Bot with MP3 downloader and image enhancer</a></li>
@@ -40,27 +63,11 @@
           <li><a href="https://github.com/Biz3l/YTDownloader">YTDownloader - an downloader for your Youtube Videos :)</a></li>
           <li>And much more in production...</li>
         </ul>
+        </section>
       </section>
     </main>
     <footer>
-      <h2 class="subtitle">Skills</h2>
-      <div class="skillsSymbols">
-        <i class="fa-brands fa-html5 fa-3x"></i>
-        <i class="fa-brands fa-css3-alt fa-3x"></i>
-        <i class="fa-brands fa-js fa-3x"></i>
-        <i class="fa-brands fa-node-js fa-3x"></i>
-        <i class="fa-brands fa-python fa-3x"></i>
-        <i class="fa-brands fa-react fa-3x"></i>
-      </div>
-      <div id="contact">
-        <h3>Contact</h3>
-        <p>Have any interesting project? Contact Me</p>
-        <p><strong>Email:</strong><a id="email" href="mailto:contato.goalves@gmail.com">contato.goalves@gmail.com</a></p>
-        <div id="contactSymbols">
-          <a href="https://www.linkedin.com/in/gabriel-o-alves/"><i class="fa-brands fa-linkedin fa-3x"></i></a>
-          <a href="https://github.com/Biz3l"><i class="fa-brands fa-github fa-3x"></i></a>
-        </div>
-      </div>
+      <p>© Biz3l Portfolio</p>
     </footer>
   </body>
 </html>
