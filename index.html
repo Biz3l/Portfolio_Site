@@ -14,7 +14,7 @@
       <p id="titleNav">Biz3l<span class="titleDot">.</span>Portfolio</p>
       <ul id="Nav">
         <li><button class="tabButton active" data-tab-target="aboutTab" aria-selected="true">About</button></li>
-        <li><button class="tabButton" data-tab-target="projectsTab" aria-selected="false">Projects</button></li>
+        <li><button id="projectsTabButton" class="tabButton" data-tab-target="projectsTab" data-text="Projects" aria-selected="false">Projects</button></li>
       </ul>
     </nav>
     <main>
@@ -22,8 +22,8 @@
         <section id="aboutMe">
           <div class="textSection">
             <div id="aboutMeTitle">
-              <h1>About</h1>
-              <h1 id="titleRed">Me</h1>
+              <h1 class="titleGlow">About</h1>
+              <h1 id="titleRed" class="titleGlow">Me</h1>
             </div>
             <p id="aboutMeText">Since I was a kid, I’ve always had the impression that technology is truly incredible, and everything related to it has this "impressive touch." That’s when I started taking apart and putting electronics back together, and over time, my fascination with technology just grew stronger.
              After diving deeper into it through study, here I am today: working with the Adobe Suite since 2019, and now exploring even more areas, from electronics to programming. For me, technology is not just a passion—it’s a journey of discovery and endless possibilities.</p>
@@ -34,7 +34,7 @@
           </div>
         </section>
         <section id="aboutStacks">
-          <h2 class="subtitle">Stacks</h2>
+          <h2 class="subtitle titleGlow">Stacks</h2>
           <div class="skillsSymbols">
             <i class="fa-brands fa-html5 fa-3x"></i>
             <i class="fa-brands fa-css3-alt fa-3x"></i>
@@ -49,7 +49,7 @@
           </div>
         </section>
         <section id="contact">
-          <h3>Contact</h3>
+          <h3 class="titleGlow">Contact</h3>
           <p>Have any interesting project? Contact Me</p>
           <p><strong>Email:</strong><a id="email" href="mailto:contato.goalves@gmail.com">contato.goalves@gmail.com</a></p>
           <div id="contactSymbols">
@@ -60,7 +60,7 @@
       </section>
       <section id="projectsTab" class="tabSection">
         <section id="projects">
-        <h2 class="subtitle">Projects</h2>
+        <h2 class="subtitle titleGlow">Projects</h2>
         <ul>
           <li><a id="dcBotLink" href="https://github.com/Biz3l/BillieJeans-BJ_Dc_bot">Discord Bot with MP3 downloader and image enhancer</a></li>
           <li>AutoResponder for WA (Private)</li>
