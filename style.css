@@ -51,6 +51,10 @@ nav ul {
   margin-bottom: 6px;
 }
 
+#titleNav .titleDot {
+  color: var(--highlight);
+}
+
 .tabButton {
   padding: 8px 14px;
   background-color: transparent;
@@ -299,28 +303,23 @@ footer {
 }
 
 .fa-css3-alt:hover {
-  color: rgb(206, 56, 206);
-  transition: color 0.5s, transform 0.5s;
+  color: #1572b6;
 }
 
 .fa-js:hover {
-  color: yellow;
-  transition: color 0.5s, transform 0.5s;
+  color: #f7df1e;
 }
 
 .fa-node-js:hover {
-  color: rgb(101, 168, 0);
-  transition: color 0.5s, transform 0.5s;
+  color: #5fa04e;
 }
 
 .fa-python:hover {
-  color: yellow;
-  transition: color 0.5s, transform 0.5s;
+  color: #3776ab;
 }
 
 .fa-react:hover {
-  color: rgb(45, 223, 164);
-  transition: color 0.5s, transform 0.5s;
+  color: #61dafb;
 }
 
 .devicon-java-plain:hover {
